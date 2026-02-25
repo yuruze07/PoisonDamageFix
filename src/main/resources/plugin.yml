@@ -1,0 +1,16 @@
+name: PoisonDamageFix
+version: '0.1.0'
+main: com.fawwa.PoisonDamageFix.PoisonDamageFix
+api-version: '1.21.11'
+description: Fixes poison damage mechanics with damage multiplier for higher levels
+author: fawwa
+
+permissions:
+  poisondamagefix.*:
+    description: Wildcard permission
+    default: op
+    children:
+      poisondamagefix.debug: true
+  poisondamagefix.debug:
+    description: Allows viewing debug info
+    default: op

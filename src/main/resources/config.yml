@@ -1,0 +1,27 @@
+# PoisonDamageFix Configuration
+# For Paper 1.21.11
+
+damage:
+  # Interval untuk level 2 ke atas (dalam tick)
+  # 12 tick = 0.6 detik
+  base-interval: 12
+  
+  # Base damage level 1 (1.0 = 0.5 heart)
+  base-damage: 1.0
+  
+  # Damage multiplier untuk level 3 ke atas
+  # Rumus: base-damage * (1.0 + ((level-2) * multiplier-step))
+  multiplier:
+    enabled: true
+    start-level: 3
+    step: 0.5  # Setiap level naik 0.5x (0.25 heart)
+    
+  # Custom multiplier (override rumus di atas)
+  custom:
+    3: 1.5  # level 3 = 1.5x (0.75 heart)
+    4: 2.0  # level 4 = 2.0x (1.0 heart)
+    5: 2.5  # level 5 = 2.5x (1.25 heart)
+    6: 3.0  # level 6 = 3.0x (1.5 heart)
+    
+debug:
+  enabled: false

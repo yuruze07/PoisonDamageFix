@@ -154,18 +154,6 @@ public class PoisonListener implements Listener {
           entity.damage(damageToDeal);
           totalDamageDealt += damageToDeal;
 
-          // Efek visual untuk damage besar
-          if (poisonLevel >= 4) {
-            entity
-              .getWorld()
-              .playSound(
-                entity.getLocation(),
-                org.bukkit.Sound.ENTITY_PLAYER_HURT,
-                0.3f,
-                0.5f + (poisonLevel * 0.1f)
-              );
-          }
-
           // Debug untuk testing
           // if (entity instanceof Player) {
           //     ((Player) entity).sendMessage("§cPoison lvl " + poisonLevel +

@@ -3,6 +3,8 @@ package com.fawwa.PoisonDamageFix;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.UUID;
+import org.bukkit.damage.DamageSource;
+import org.bukkit.damage.DamageType;
 import org.bukkit.entity.LivingEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
@@ -151,7 +153,12 @@ public class PoisonListener implements Listener {
         }
 
         if (damageToDeal > 0) {
-          entity.damage(damageToDeal);
+          // Buat DamageSource untuk poison
+          DamageSource damageSource = DamageSource.builder(DamageType.MAGIC)
+            .withDirectEntity(entity)
+            .build();
+
+          entity.damage(damageToDeal, damageSource);
           totalDamageDealt += damageToDeal;
 
           // Debug untuk testing

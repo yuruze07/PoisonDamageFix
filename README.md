@@ -8,15 +8,15 @@ In vanilla Minecraft, poison levels 3 and above deal the same damage as poison l
 ## The Solution
 This plugin enhances poison damage for level 3 and above while keeping the original behavior for levels 1-2:
 
-| Level | Interval | Damage per Tick (Hearts) | Damage Multiplier |
-|-------|----------|-------------------------|-------------------|
-| 1 | 25 ticks | 0.5❤️ | 1x (vanilla) |
-| 2 | 12 ticks | 0.5❤️ | 1x (vanilla) |
-| 3 | 12 ticks | 0.75❤️ | 1.5x |
-| 4 | 12 ticks | 1.0❤️ | 2.0x |
-| 5 | 12 ticks | 1.25❤️ | 2.5x |
-| 6 | 12 ticks | 1.5❤️ | 3.0x |
-| n | 12 ticks | 0.5 + ((n-2) × 0.25)❤️ | 1.0 + ((n-2) × 0.5) |
+| Level | Interval | Damage (Hearts) |
+|-------|----------|-------------------------|
+| 1 | 25 ticks | 0.5❤️ |
+| 2 | 12 ticks | 0.5❤️ |
+| 3 | 12 ticks | 0.75❤️ |
+| 4 | 12 ticks | 1.0❤️ |
+| 5 | 12 ticks | 1.25❤️ |
+| 6 | 12 ticks | 1.5❤️ |
+| n | 12 ticks | 0.5 + ((n-2) × 0.25)❤️ |
 
 ## Features
 - ✅ Preserves vanilla behavior for poison levels 1-2
